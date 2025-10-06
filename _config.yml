@@ -18,7 +18,7 @@ email: gudevsoc@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   GUDEV is Glasgow University's Game Development Society. 
   We host events like socials, workshops, and weekend-long gamejams to test your dev skills!
-baseurl: "/Site" # the subpath of your site, e.g. /blog
+baseurl: "/GuDevSite" # the subpath of your site, e.g. /blog
 url: "http://gudevsoc.com" # the base hostname & protocol for your site, e.g. http://example.com
 gamecdnurl: http://xiv.moe # CDN that provides games
 staticurl: "/static"
