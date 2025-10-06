@@ -21,7 +21,7 @@ description: > # this means to ignore newlines until "baseurl:"
 baseurl: "/GuDevSite" # the subpath of your site, e.g. /blog
 url: "http://gudevsoc.com" # the base hostname & protocol for your site, e.g. http://example.com
 gamecdnurl: http://xiv.moe # CDN that provides games
-staticurl: "/static"
+staticurl: "/GuDevSite/static"
 collections:
   events:
     output: false
