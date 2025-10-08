@@ -1,33 +1,47 @@
 {
-  description = "Ruby + Jekyll development shell";
+  description = "GuDevSite Jekyll development environment";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 
   outputs =
     { self, nixpkgs }:
+    let
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "x86_64-darwin"
+        "aarch64-darwin"
+      ];
+      forAllSystems = nixpkgs.lib.genAttrs systems;
+    in
     {
-      devShells.aarch64-darwin.default =
+      devShells = forAllSystems (
+        system:
         let
-          pkgs = import nixpkgs { system = "aarch64-darwin"; };
+          pkgs = import nixpkgs { inherit system; };
         in
-        pkgs.mkShell {
-          name = "jekyll-env";
-          buildInputs = [
-            pkgs.ruby_3_3
-            pkgs.jekyll
-            pkgs.clang
-            pkgs.make
-            pkgs.pkg-config
-            pkgs.libffi
-            pkgs.zlib
-            pkgs.openssl
-          ];
+        {
+          default = pkgs.mkShell {
+            name = "jekyll-dev-shell";
 
-          shellHook = ''
-            export GEM_HOME=$PWD/.gems
-            export PATH="$GEM_HOME/bin:$PATH"
-            echo "💎 Ruby + Jekyll dev shell ready"
-          '';
-        };
+            buildInputs = [
+              pkgs.ruby_3_3
+              pkgs.jekyll
+              pkgs.clang
+              pkgs.cmake
+              pkgs.pkg-config
+              pkgs.zlib
+              pkgs.libffi
+              pkgs.openssl
+            ];
+
+            shellHook = ''
+              export GEM_HOME=$PWD/.gems
+              export PATH="$GEM_HOME/bin:$PATH"
+              echo "💎 Jekyll shell ready for ${system}"
+            '';
+          };
+        }
+      );
     };
 }

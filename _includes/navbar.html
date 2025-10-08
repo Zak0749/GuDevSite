@@ -1,32 +1,204 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+<nav
+    class="navbar sticky-bottom bg-body-tertiary"
+    id="navbar"
+    style="overflow-x: scroll"
+>
+    <ul
+        class="list-group list-group-horizontal list-group-flush p-0 m-0 gap-3"
+        id="nav-list"
+    >
+        <a
+            href="#our-society"
+            class="list-group-item list-group-item-action nav-link p-0"
+        >
+            <div class="card text-bg-dark my-nav-card">
+                <img
+                    src="{{site.staticurl}}/images/navbar/logo.png"
+                    class="card-img"
+                    alt="About GUDEV"
+                />
+                <div class="card-img-overlay gradient-overlay">
+                    <h5 class="card-title align-self-end mb-0">About GUDEV</h5>
+                </div>
+            </div>
+        </a>
 
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{ site.baseurl }}/">[GUDEV]</a>
-        </div>
-
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li {% if page.url == "/" %} class="active"{% endif %}><a href="{{ site.baseurl }}/">About</a></li>
-                <li {% if page.url contains '/events/' %} class="active"{% endif %}><a href="{{ site.baseurl }}/events/">Events</a></li>
-                <li {% if page.url contains "/gamejam/" %} class="active"{% endif %}><a href="{{ site.baseurl }}/gamejam/">GameJam</a></li>
-           <!--    <li {% if page.url contains "/gamedev/" %} class="active"{% endif %}><a href="{{ site.baseurl }}/gamedev/">GameDev</a></li> -->
-                <li class="{% if page.url contains '/games/' %}active{% endif %}" ><a href="{{ site.baseurl }}/games/">Games</a></li>
-                <li class="{% if page.url contains '/resources/' %}active{% endif %}" ><a href="{{ site.baseurl }}/resources/">Resources</a></li>
-                <li class="{% if page.url contains '/contact/' %}active{% endif %}" ><a href="{{ site.baseurl }}/contact/">Contact</a></li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="https://discord.gg/DhT3XgU"><img class="icon-image" src="{{site.baseurl}}/static/images/discord-official.png" width=512 height=512 alt="discord"></a></li>
-          <!--      <li><a href="https://www.facebook.com/gudevsoc/"><img class="icon-image" src="{{site.baseurl}}/static/images/facebook-official.png" width=512 height=512 alt="fb"></a></li> -->
-            </ul>
-        </div>
-    </div>
+        <a
+            href="#gamejam"
+            class="list-group-item list-group-item-action nav-link p-0"
+        >
+            <div class="card text-bg-dark my-nav-card">
+                <img
+                    src="{{site.staticurl}}/images/navbar/logo.png"
+                    class="card-img"
+                    alt="Gamejams"
+                />
+                <div class="card-img-overlay gradient-overlay">
+                    <h5 class="card-title align-self-end mb-0">Gamejams</h5>
+                </div>
+            </div>
+        </a>
+        <a
+            href="#join"
+            class="list-group-item list-group-item-action nav-link p-0"
+        >
+            <div class="card text-bg-dark my-nav-card">
+                <img
+                    src="{{site.staticurl}}/images/navbar/logo.png"
+                    class="card-img"
+                    alt="Participate"
+                />
+                <div class="card-img-overlay gradient-overlay">
+                    <h5 class="card-title align-self-end mb-0">Participate</h5>
+                </div>
+            </div>
+        </a>
+        <a
+            href="#resources"
+            class="list-group-item list-group-item-action nav-link p-0"
+        >
+            <div class="card text-bg-dark my-nav-card">
+                <img
+                    src="{{site.staticurl}}/images/navbar/logo.png"
+                    class="card-img"
+                    alt="Resources"
+                />
+                <div class="card-img-overlay gradient-overlay">
+                    <h5 class="card-title align-self-end mb-0">Resources</h5>
+                </div>
+            </div>
+        </a>
+        <a
+            href="#comittee"
+            class="list-group-item list-group-item-action nav-link p-0"
+        >
+            <div class="card text-bg-dark my-nav-card">
+                <img
+                    src="{{site.staticurl}}/images/navbar/logo.png"
+                    class="card-img"
+                    alt="Comittee"
+                />
+                <div class="card-img-overlay gradient-overlay">
+                    <h5 class="card-title align-self-end mb-0">Comittee</h5>
+                </div>
+            </div>
+        </a>
+        <a
+            href="#discord"
+            class="list-group-item list-group-item-action nav-link p-0"
+        >
+            <div class="card text-bg-dark my-nav-card">
+                <img
+                    src="{{site.staticurl}}/images/navbar/discord-logo.png"
+                    class="card-img"
+                    alt="Discord"
+                />
+                <div class="card-img-overlay gradient-overlay">
+                    <h5 class="card-title align-self-end mb-0">Discord</h5>
+                </div>
+            </div>
+        </a>
+        <a
+            href="#itch"
+            class="list-group-item list-group-item-action nav-link p-0"
+        >
+            <div class="card text-bg-dark my-nav-card">
+                <img
+                    src="{{site.staticurl}}/images/navbar/itch-logo.png"
+                    class="card-img"
+                    alt="Itch"
+                />
+                <div class="card-img-overlay gradient-overlay">
+                    <h5 class="card-title align-self-end mb-0">Itch</h5>
+                </div>
+            </div>
+        </a>
+        <a
+            href="#instagram"
+            class="list-group-item list-group-item-action nav-link p-0"
+        >
+            <div class="card text-bg-dark my-nav-card">
+                <img
+                    src="{{site.staticurl}}/images/navbar/instagram-logo.png"
+                    class="card-img"
+                    alt="Instagram"
+                />
+                <div class="card-img-overlay gradient-overlay">
+                    <h5 class="card-title align-self-end mb-0">Instagram</h5>
+                </div>
+            </div>
+        </a>
+        <a
+            href="#src"
+            class="list-group-item list-group-item-action nav-link p-0"
+        >
+            <div class="card text-bg-dark my-nav-card">
+                <img
+                    src="{{site.staticurl}}/images/navbar/src-logo.png"
+                    class="card-img"
+                    alt="Src"
+                />
+                <div class="card-img-overlay gradient-overlay">
+                    <h5 class="card-title align-self-end mb-0">Src</h5>
+                </div>
+            </div>
+        </a>
+        <div style="padding-left: 1000px"></div>
+    </ul>
 </nav>
 
+<style>
+    .card {
+        width: 12rem;
+        height: 12rem;
+        transition:
+            width 1s,
+            height 1s;
+    }
+
+    .nav-link.active .card-img-overlay,
+    .nav-link:hover .card-img-overlay {
+        opacity: 1;
+    }
+
+    .card > .card-img-overlay {
+        opacity: 0;
+        display: flex;
+        transition: opacity 0.5s;
+    }
+
+    .gradient-overlay {
+        transition: background 0.5s ease-in-out; /* 👈 Smooth transition */
+    }
+
+    .active .gradient-overlay,
+    .gradient-overlay:hover {
+        background: linear-gradient(
+            to top,
+            rgba(50, 50, 50, 0.9),
+            rgba(50, 50, 50, 0.7) 20%,
+            rgba(50, 50, 50, 0.4) 40%,
+            rgba(50, 50, 50, 0)
+        );
+        /* You can adjust opacity (0.7) or height below */
+    }
+</style>
+
+<script>
+    const firstScrollSpyEl = document.querySelector('[data-bs-spy="scroll"]');
+    firstScrollSpyEl.addEventListener("activate.bs.scrollspy", () => {
+        let list = document.getElementById("nav-list");
+        let selected = list.getElementsByClassName("active");
+        let toscroll = document.getElementById("navbar");
+
+        if (selected) {
+            let s = selected[0];
+
+            toscroll.scrollBy({
+                top: 0,
+                left: s.getBoundingClientRect().left - 20,
+                behavior: "smooth",
+            });
+        }
+    });
+</script>
